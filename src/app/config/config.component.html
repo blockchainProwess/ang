@@ -1,0 +1,19 @@
+<div *ngIf = "response != null"></div>
+<h3> Employee Code:{{ response.data.Code }}</h3>
+<h3> Total Leaves:{{ response.data.U_TLEAVES }}</h3>
+<table class="table" id='tab' class = 'center'>
+    <thead>
+    <tr>
+        <th scope="col">Available Leaves</th>
+        <th scope="col">From Date</th>
+        <th scope="col">To Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let e of response.data?.LMSITEMCollection">
+        <td>{{ e.U_ALEAVES }}</td>
+        <td>{{ e.U_FDATE }}</td>
+        <td>{{ e.U_TDATE }}</td>
+    </tr>
+    </tbody>
+</table>                    

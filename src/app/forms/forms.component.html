@@ -1,0 +1,23 @@
+<form class = 'center'>
+    <label>From Date:</label>
+    <br/>
+    <input type = "text" placeholder = "From Date" [(ngModel)] = "dataForm.fdate1" name = "fdate1"/>
+    <br/>
+    <label>To Date:</label>
+    <br/>
+    <input type = "text" placeholder = "To Date" name = "tdate1"[(ngModel)] = "dataForm.tdate1"/>
+    <br/>
+    <label>Applied Leaves:</label>
+    <br/>
+    <input type = "number" placeholder = "Applied leaves" name = "applied_leaves1" [(ngModel)] = "dataForm.applied_leaves1"/>
+    <br/>
+    <label>Employee Code:</label>
+    <br/>
+    <input type = "text" placeholder = "Employee Code" name = "code" [(ngModel)] = "dataForm.code"/>
+    <br/>
+    <label>Total Leaves:</label>
+    <br/>
+    <input type = "number" placeholder = "Total leaves" name = "total_leaves" [(ngModel)] = "dataForm.total_leaves"/>
+    <br/>
+    <button type = "submit" (click)='formSubmit()'>Submit</button>
+</form>

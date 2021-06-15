@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ConfigService } from '../config/config.service';
+//import { ConfigService } from '../config/config.service';
 
 @Component({
   selector: 'app-forms',
@@ -11,10 +11,14 @@ import { ConfigService } from '../config/config.service';
 })
 export class FormsComponent implements OnInit {
 
-  dataForm: any = {'companydb': 'PROWESS', 'password': 'Prosap@123', 'username': 'manager','code': ' ', 'applied_leaves1': 2, 'total_leaves': 12,'fdate1': ' ', 'tdate1': ' ', 'applied_leaves2':4,'fdate2':'21 jul','tdate2':'22 jul'};
-  constructor( private formbuilder:FormBuilder,private router:Router,private httpClient: HttpClient, public service:ConfigService) { }
+  dataForm: any = {'companydb': 'PROWESS', 'password': 'Prosap@123', 'username': 'manager','code': ' ', 'applied_leaves1': 0, 'total_leaves': 0,'fdate1': ' ', 'tdate1': ' '};
+  constructor( private formbuilder:FormBuilder,private router:Router,private httpClient: HttpClient) { }
   ngOnInit(): void {
 
+  }
+
+  gotoHome(){
+    this.router.navigate(['data']);  // define your component where you want to go
   }
 
   headerDict = {

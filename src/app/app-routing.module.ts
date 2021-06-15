@@ -5,7 +5,7 @@ import { ConfigComponent } from './config/config.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'initial',
     component: FormsComponent,
   },
   {

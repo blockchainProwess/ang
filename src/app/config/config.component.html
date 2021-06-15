@@ -1,10 +1,28 @@
-<div *ngIf = "response != null"></div>
+<style>
+h4 {text-align: center;}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<div>
+    <input id="button" type="button" value="<" (click)="gotoHome()">
+</div>
+<h4>Business One LMS Demo</h4>
+
+<form>
+<label>Employee Code:</label>
+<br/><br/>
+<input type = "text" placeholder = "Employee Code" [(ngModel)] = "dataForm.empcode" name = "empcode"/>
+<br/><br/>
+<button type = "submit" (click)='formSubmit()'>Submit</button>
+</form>
+
 <h3> Employee Code:{{ response.data.Code }}</h3>
 <h3> Total Leaves:{{ response.data.U_TLEAVES }}</h3>
-<table class="table" id='tab' class = 'center'>
+<table class="table" id='tab' class = 'center' style="width:100%">
     <thead>
     <tr>
-        <th scope="col">Available Leaves</th>
+        <th scope="col">Applied Leaves</th>
         <th scope="col">From Date</th>
         <th scope="col">To Date</th>
     </tr>
